@@ -1,0 +1,29 @@
+package Day2;
+
+public class DressFacotry TSHIRT_CUSTOMERS {
+    int count;
+    String colour;
+    char size;
+
+    static{
+        System.out.println("WELCOME");
+    }
+    DressFacotry(int NumberOfShirts,String ShirtColour,char Size){
+        this.count= NumberOfShirts;
+        this.colour=ShirtColour;
+        this.size=Size;
+    }
+    public void display(){
+        System.out.println("Total tshirt count is "+count);
+        System.out.println("Total tshirt colour is "+colour);
+        System.out.println("Total tshirt colour is "+size);
+    }
+
+    public static void main(String args []){
+        DressFacotry N = new T_Shirt_Company(100,"All",'m');
+        n.display();
+        n.customers();
+    }
+
+
+}
