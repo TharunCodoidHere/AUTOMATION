@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+class removeSpace {
+   static String input = "";
+   public static void main(String[] args)  {
+       Scanner scanner=new Scanner(System.in);
+       System.out.println("Enter a string as an input");
+       input = scanner.nextLine();
+       String result = removeSpace.removeSpaces();
+
+       System.out.println("Our result string without leading and trailing spaces is: "+result);
+
+   }
+
+   private static String removeSpaces() {
+       int left=0,right=input.length()-1;
+       while(left<input.length() && input.charAt(left)==' ')
+       {
+           left++;
+       }
+       while(right>=0 && input.charAt(right)==' ')
+       {
+           right--;
+       }
+       if(left>right)
+       {
+           return "";
+       }
+       return input.substring(left,right+1);
+   }
+}
