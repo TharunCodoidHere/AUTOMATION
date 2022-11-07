@@ -1,0 +1,22 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class Weger {
+
+    public static void main(String[] args) throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
+        driver.findElement(By.id("login1")).sendKeys("Itachi");
+        String n= driver.findElement(By.name("login")).getAttribute("value");
+        Thread.sleep(2000);
+        System.out.println(n);
+
+
+
+    }
+}
+
